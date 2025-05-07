@@ -2,37 +2,241 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 20px;
+  font-size: calc(10px + 1vmin);
   color: white;
 }
 
-.App-link {
+h1 {
+  margin-bottom: 30px;
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h2 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.connection-container, 
+.transaction-container, 
+.batch-container, 
+.status-container,
+.eip5792-container {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #1e2128;
+  border-radius: 8px;
+}
+
+.eip5792-container {
+  border: 1px solid #61dafb;
+}
+
+.title-with-help {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.button-connect {
+  background-color: #61dafb;
+  color: #282c34;
+}
+
+.button-connect:hover {
+  background-color: #4db0db;
+}
+
+.button-send {
+  background-color: #4caf50;
+  color: white;
+}
+
+.button-send:hover {
+  background-color: #3e8e41;
+}
+
+.button-add {
+  background-color: #61dafb;
+  color: #282c34;
+}
+
+.button-add:hover {
+  background-color: #4db0db;
+}
+
+.button-remove {
+  background-color: #f44336;
+  color: white;
+}
+
+.button-remove:hover {
+  background-color: #d32f2f;
+}
+
+.button-check {
+  background-color: #ff9800;
+  color: white;
+}
+
+.button-check:hover {
+  background-color: #e68a00;
+}
+
+.button-log {
+  background-color: #9c27b0;
+  color: white;
+}
+
+.button-log:hover {
+  background-color: #7b1fa2;
+}
+
+.button-help {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #61dafb;
+  color: #282c34;
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.button-disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.account-info {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.account-address, .network-name, .network-supported {
+  font-family: monospace;
+  word-break: break-all;
+}
+
+.network-name {
+  color: #61dafb;
+}
+
+.network-supported {
+  color: #4caf50;
+}
+
+.network-warning {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: rgba(244, 67, 54, 0.1);
+  border: 1px solid #f44336;
+  border-radius: 4px;
+  color: #f44336;
+  font-size: 0.9rem;
+}
+
+.batch-item {
+  background-color: #353a45;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #61dafb;
+  background-color: #282c34;
+  color: white;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.tip {
+  display: block;
+  font-size: 0.8rem;
+  color: #aaaaaa;
+  margin-top: 4px;
+}
+
+.batch-buttons, .button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.button-group {
+  flex-direction: column;
+}
+
+.status-container {
+  text-align: left;
+}
+
+.status-text {
+  background-color: #353a45;
+  padding: 10px;
+  border-radius: 4px;
+  font-family: monospace;
+  word-break: break-all;
+  max-height: 300px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+.capabilities-display {
+  margin-top: 10px;
+  text-align: left;
+  background-color: #353a45;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.capabilities-display pre {
+  font-family: monospace;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  word-break: break-all;
 }

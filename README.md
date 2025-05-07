@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### using 5792 wallet_sendCalls atomic batching with metamak's EIP7702 support on certain networks.
+
 ## Available Scripts
 
 In the project directory, you can run:
