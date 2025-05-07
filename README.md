@@ -70,3 +70,65 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## My Notes
+
+Before
+cast code 0x7306aC7A32eb690232De81a9FFB44Bb346026faB --rpc-url https://sepolia.drpc.org
+0x
+
+#### logs
+
+Sending atomic batch with calls: 
+[
+    {
+        "to": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+        "value": "0x0",
+        "data": "0x00"
+    },
+    {
+        "to": "0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045",
+        "value": "0x0",
+        "data": "0x00"
+    }
+]
+
+Atomic batch result:
+{
+    "id": "0xe05070ce72ba4212ba7e20292a0be4cb"
+}
+
+Atomic batch using wallet_sendCalls
+https://sepolia.etherscan.io/tx/0x601b3c6b8cb9407c86e5b2e424007acdd08eaafceea7976d97ae6c4605835472
+
+Batch status: 
+{
+    "version": "2.0.0",
+    "id": "0xe05070ce72ba4212ba7e20292a0be4cb",
+    "chainId": "0xaa36a7",
+    "atomic": true,
+    "status": 200,
+    "receipts": [
+        {
+            "blockHash": "0xe0e94f6ddd3b1a6972157032a379ba1a6ffb3bd498f43be7d16bd12f9263cd54",
+            "blockNumber": "0x7e4a20",
+            "gasUsed": "0xab66",
+            "logs": [],
+            "status": "0x1",
+            "transactionHash": "0x601b3c6b8cb9407c86e5b2e424007acdd08eaafceea7976d97ae6c4605835472"
+        }
+    ]
+}
+
+After EOA has been upgraded to Smart Contract.
+
+https://sepolia.etherscan.io/address/0x7306ac7a32eb690232de81a9ffb44bb346026fab#authlist7702
+
+
+Now,
+cast code 0x7306aC7A32eb690232De81a9FFB44Bb346026faB --rpc-url https://sepolia.drpc.org
+0xef010063c0c19a282a1b52b07dd5a65b58948a07dae32b
+
+
+### Metamask EIP7702 Delegator
+https://sepolia.etherscan.io/address/0x63c0c19a282a1B52b07dD5a65b58948A07DAE32B#code
